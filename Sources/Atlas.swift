@@ -1,8 +1,10 @@
 public struct Country {
     public let code: String
+    public let message: String
     
-    public init(code: String) {
+    public init(code: String, message: String) {
         self.code = code.uppercased()
+        self.message = message
     }
     
     public var emojiFlag: String {
@@ -16,7 +18,8 @@ public struct Country {
         return UnicodeScalar(regionalIndicatorSymbolA.value + distance)
     }
     
-    public func logToConsole(msg: String){
-        print(msg)
+    // Test function
+    public var returnMessage: String{
+        return "You said: \(self.message)"
     }
 }
