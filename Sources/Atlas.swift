@@ -15,4 +15,8 @@ public struct Country {
         let distance = unicodeScalar.value - uppercaseA.value
         return UnicodeScalar(regionalIndicatorSymbolA.value + distance)
     }
+    
+    public func logToConsole(msg: String){
+        print(msg)
+    }
 }
